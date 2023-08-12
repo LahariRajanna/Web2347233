@@ -1,0 +1,25 @@
+.main{
+    text-align: center;
+    font-family:serif;
+    font-size: 75px;
+    color: rgb(164, 8, 50);
+
+}
+#geo-button{
+    padding-top: 10%;
+    padding-left: 30%;
+    align-self: center;
+ 
+    align-items: center;
+}
+.rounded-full {
+    align-items: center;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("world1.jpg");
+    background-size: cover;
+    background-position: center;
+}
