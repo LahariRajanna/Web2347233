@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="items.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<products>
+    <product>
+    <id>Bike123</id>
+    <name>Royal Enfield</name>
+    <price>110000</price>
+    <quantity>5</quantity>
+    <category>Bike</category>
+    </product>
+    <product>
+    <id>Car123</id>
+    <name>Ford</name>
+    <price>600000</price>
+    <quantity>3</quantity>
+    <category>Car</category>
+    </product>
+    <product>
+    <id>Bicycle123</id>
+    <name>hero</name>
+    <price>150000</price>
+    <quantity>10</quantity>
+    <category>Bicycle</category>
+    </product>
+    </products>
