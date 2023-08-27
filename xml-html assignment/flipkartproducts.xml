@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="" type="application/xml" 
+schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="" type="application/xml-dtd"?>
+<Flipkart>
+<products>
+ <product>
+ <id>001</id>
+ <Name>Laptops</Name>
+ <price>350$</price>
+ <quantity>10</quantity>
+ <Description>Dell</Description>
+ </product>
+ <product>
+ <id>002</id>
+ <Name>Mobiles</Name>
+ <price>150$</price>
+ <quantity>50</quantity>
+ <Description>Pixel</Description>
+ </product>
+ <product>
+ <id>003</id>
+ <Name>Electronics</Name>
+ <price>550$</price>
+ <quantity>60</quantity>
+ <Description>Panasonic A/C</Description>
+ </product>
+ <product>
+ <id>004</id>
+ <Name>Clothes</Name>
+ <price>50$</price>
+ <quantity>120</quantity>
+ <Description>Zara dress</Description>
+ </product>
+ <product>
+ <id>005</id>
+ <Name>Speakers</Name>
+ <price>250$</price>
+ <quantity>560</quantity>
+ <Description>Boat 2000Amph Sound Bar</Description>
+ </product>
+</products>
+</Flipkart>
