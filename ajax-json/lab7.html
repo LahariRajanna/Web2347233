@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch Books</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function displayBooks(books) {
+            var bookList = $('#bookList');
+            bookList.empty();
+            $.each(books, function (i, book) {
+                var title = $('<h2>').text(book.title);
+                var author = $('<p>').text('Author: ' + book.author);
+                var publisher = $('<p>').text('Publisher: ' + book.publisher);
+                var li = $('<li>').append(title, author, publisher);
+                bookList.append(li);
+            });
+        }
+
+        $(document).ready(function () {
+            $('#fetchBooks').click(function () {
+                $.ajax({
+                    url: 'https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json&jscmd=data',
+                    dataType: 'json',
+                    success: function (data) {
+                        var books = [];
+                        $.each(data, function (key, value) {
+                            books.push({
+                                title: value.title,
+                                author: value.authors[0].name,
+                                publisher: value.publishers[0].name
+                            });
+                        });
+                        displayBooks(books);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 style="color: burlywood;">
+        <center>BOOK FETCH</center>
+    </h1>
+    <pre>        Enjoy the story of Tom Sawyer as a mischievous young boy carries on under the watchful eye of his Aunt Polly.
+        Mark Twain's Tom Sawyer is one part trickster, one escape artist and one part very lucky fellow! 
+        The Adventures of Tom Sawyer takes the reader along on a series of entertaining adventures and pranks while Tom's youthful romance
+        with his sweetheart Becky Thatcher blooms in the background. 
+        The Adventures of Tom Sawyer is one of Mark Twain's most beloved works.
+
+        This book is featured in our collection of Books for Young Readers and 25 Great American Novels</pre>
+
+    <center><img src="tom.jpg" alt="tom" width="250px"></center>
+
+    <pre>
+    </pre>
+
+    <center><button id="fetchBooks">Fetch Book</button></center>
+    <ul id="bookList"></ul>
+</body>
+
+</html>
