@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <label for="#">Light Laughs</label>
+        <a href="index.html">home</a>
+        <a href="feedback.html">feedback</a>
+        <a href="jokes-json.html">jokes</a>
+    </nav>
+
+    <center>
+        <h1>Joke Generator</h1>
+
+        <button id="getJokeButton">Get Joke</button>
+    </center>
+    <div id="jokeContainer"></div>
+
+    <script>
+
+        document.getElementById('getJokeButton').addEventListener('click', fetchJoke);
+
+        async function fetchJoke() {
+            const apiUrl = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
+
+            try {
+                const response = await fetch(apiUrl);
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch joke');
+                }
+
+                const data = await response.json();
+
+                if (data.type === 'single') {
+                    displayJoke(data.joke);
+                } else if (data.type === 'twopart') {
+                    displayJoke(data.setup + '<br>' + data.delivery);
+                }
+            } catch (error) {
+                console.error('Error fetching joke:', error);
+            }
+        }
+
+        function displayJoke(joke) {
+            const jokeContainer = document.getElementById('jokeContainer');
+            jokeContainer.innerHTML = `<p>${joke}</p>`;
+        }
+    </script>
+</body>
+
+</html>

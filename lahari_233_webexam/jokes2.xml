@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jokes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="jokes.xsd">
+    <joke_category>Programming</joke_category>
+    <joke>Why don't scientists trust atoms? Because they make up everything!</joke>
+
+    <joke_category>Animal Crossing</joke_category>
+    <joke>Parallel lines have so much in common. It's a shame they'll never meet.</joke>
+
+    <joke_category>Religion</joke_category>
+    <joke>I used to play piano by ear, but now I use my hands.</joke>
+
+    <joke_category>Political</joke_category>
+    <joke>Did you hear about the mathematician who's afraid of negative numbers? He'll stop
+        at nothing to avoid them.</joke>
+
+    <joke_category>Food</joke_category>
+    <joke>What do you call a fish with no eyes? Fsh.</joke>
+
+    <joke_category>Geography</joke_category>
+    <joke>I'm on a seafood diet. I see food, and I eat it.</joke>
+
+    <joke_category>Celebrity</joke_category>
+    <joke>Why did the scarecrow win an award? Because he was outstanding in his field!</joke>
+
+    <joke_category>Spooky</joke_category>
+    <joke>What's orange and sounds like a parrot? A carrot.</joke>
+
+    <joke_category>Miscellaneous</joke_category>
+    <joke>How do you organize a space party? You "planet"!</joke>
+
+    <joke_category>Math Movies</joke_category>
+    <joke>How does a penguin build its house? Igloos it together!</joke>
+</jokes>
